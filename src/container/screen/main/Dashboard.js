@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import CommonStyle from '../../../common/CommonStyle';
 class Dashboard extends Component {
     constructor(props) {
@@ -14,7 +14,9 @@ class Dashboard extends Component {
     render() {
         return (
             <View style={CommonStyle.container_center}>
-                <Text>Dashboard</Text>
+                <TouchableOpacity onPress={() => this.props.navigation.toggleDrawer()}>
+                    <Text>Dashboard</Text>
+                </TouchableOpacity>
             </View>
         );
     }
